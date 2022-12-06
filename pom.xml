@@ -125,6 +125,18 @@
 	</properties>
 
 	<dependencies>
+		<!-- Infomodel artifact: serializer -->
+		<dependency>
+			<groupId>de.fraunhofer.iais.eis.ids</groupId>
+			<artifactId>infomodel-serializer</artifactId>
+			<version>5.0.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-io</groupId>
+					<artifactId>commons-io</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 
 		<!-- https://github.com/International-Data-Spaces-Association/IDS-Messaging-Services -->
 		<dependency>
@@ -132,6 +144,10 @@
 			<artifactId>broker</artifactId>
 			<version>${ids-messaging-services.version}</version>
 			<exclusions>
+				<exclusion>
+					<groupId>de.fraunhofer.iais.eis.ids</groupId>
+					<artifactId>infomodel-serializer</artifactId>
+				</exclusion>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-log4j12</artifactId>
