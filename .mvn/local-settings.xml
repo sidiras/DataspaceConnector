@@ -1,0 +1,24 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
+    <mirrors>
+        <mirror>
+            <id>eis-public-repo-unblocker</id>
+            <mirrorOf>eis-public-repo</mirrorOf>
+            <name></name>
+            <url>http://maven.iais.fraunhofer.de/artifactory/eis-ids-public</url>
+        </mirror>
+        <mirror>
+            <id>eis-snapshot-repo-unblocker</id>
+            <mirrorOf>eis-snapshot-repo</mirrorOf>
+            <name></name>
+            <url>http://maven.iais.fraunhofer.de/artifactory/eis-ids-snapshot</url>
+        </mirror>
+        <mirror>
+            <id>eis-ids-public-unblocker</id>
+            <mirrorOf>eis-ids-public</mirrorOf>
+            <name></name>
+            <url>http://maven.iais.fraunhofer.de/artifactory/eis-ids-public</url>
+        </mirror>
+    </mirrors>
+</settings>
