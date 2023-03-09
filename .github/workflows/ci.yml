@@ -26,7 +26,7 @@ jobs:
 
   style:
     needs: [setup]
-    timeout-minutes: 5
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -49,7 +49,7 @@ jobs:
 
   static-code-analysis:
     needs: [setup, style]
-    timeout-minutes: 5
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -93,7 +93,7 @@ jobs:
         key: ${{ runner.os }}-${{ needs.setup.outputs.branch_name }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-${{ needs.setup.outputs.branch_name }}-m2-
     - name: Unit- and Integrationtests
-      run: mvn -B -U verify --file pom.xml -Prelease
+      run: mvn clean -B -U verify --file pom.xml -Prelease
 
   mutation-tests:
     needs: [setup, unit-and-integration-tests]
